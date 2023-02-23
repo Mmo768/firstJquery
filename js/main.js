@@ -10,13 +10,13 @@ character();
 // ========== functions ==========
 function openclose(){
     if($(".sec-one").attr("toggle") == "false"){
-        $(".sec-one").show(1000);
+        $(".sec-one").show(500);
         $(".sec-one").attr("toggle","true");
-        $(".sec-two").animate({"width":`${window.innerWidth - 260}px`},1000);
+        $(".sec-two").animate({"width":`${window.innerWidth - 260}px`},500);
     }else{
-        $(".sec-one").hide(1000);
+        $(".sec-one").hide(500);
         $(".sec-one").attr("toggle","false");
-        $(".sec-two").animate({"width":"100%"},1000);
+        $(".sec-two").animate({"width":"100%"},500);
     };
 };
 
@@ -24,8 +24,8 @@ function openclose(){
 function slide(){
     for(let i=0 ; i<$(".two li").length ; i+=2){
         $(".two li").eq(i).click(()=>{
-            $(".two li").eq(i+1).slideToggle(1000);
-            $(".two li").filter(".body").not($(".two li").eq(i+1)).slideUp(1000);
+            $(".two li").eq(i+1).slideToggle(500);
+            $(".two li").filter(".body").not($(".two li").eq(i+1)).slideUp(500);
         });
     };
 };
