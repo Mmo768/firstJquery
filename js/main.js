@@ -48,7 +48,12 @@ function date(){
 function character(){
     $("textarea").keyup(()=>{
         let text = $("textarea").val();
-        $("#decount").text(100 - text.length)
+        if(text.length < 100){
+            $("#decount").text(100 - text.length);
+        }else{
+            $("#decount").text('your available character finished');
+        }
+        
     });
     };
 
